@@ -4,6 +4,7 @@ brew "git"
 brew "go"
 brew "gnupg2"
 cask "google-chrome"
+cask "iterm2"
 brew "pinentry-mac"
 brew "vim", args: ["override-system-vi"]
 brew "zsh"
