@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export ZSH=${HOME}/.oh-my-zsh
 export ZSH_CUSTOM=${HOME}/.zsh_custom
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -32,7 +32,7 @@ source $ZSH/oh-my-zsh.sh
 # Set Env Variables
 export JDK_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 export GOPATH=$HOME/Go
-export PATH=$PATH:$GOPATH/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Applications/Couchbase\ Server.app/Contents/Resources/couchbase-core/bin/
+export PATH=$PATH:$GOPATH/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Applications/Couchbase\ Server.app/Contents/Resources/couchbase-core/bin
 
 # Setup GNUPG 2
 if ! pgrep -x 0u "${USER}" gpg-agent>/dev/null 2>&1;then
