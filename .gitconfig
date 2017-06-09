@@ -1,0 +1,20 @@
+[user]
+	name = Will Dixon
+	email = dixonwille@hotmail.com
+[push]
+	default = simple
+[core]
+	autocrlf = input
+[color]
+	ui = true
+[pull]
+	rebase = true
+[alias]
+	s = status -s
+	lg = log --oneline --decorate --all --graph
+[url "git@github.com:"]
+	insteadof = https://github.com/
+[include]
+	path = .gitconfig_custom
+[url "git@code.ac.st:"]
+	insteadof = https://code.ac.st/
