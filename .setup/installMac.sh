@@ -4,4 +4,4 @@ _font="${HOME}/.fonts"
 find $_font -type f -name "*.ttf" | while read line; do
 	ln -s $line "${HOME}/Library/Fonts/$(basename $line)"
 done
-brew bundle --file="${HOME}/.setup/installMac.sh"
+brew bundle --file="${HOME}/.setup/Brewfile"
