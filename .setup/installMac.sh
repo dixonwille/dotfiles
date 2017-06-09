@@ -5,3 +5,4 @@ find $_font -type f -name "*.ttf" | while read line; do
 	ln -s $line "${HOME}/Library/Fonts/$(basename $line)"
 done
 brew bundle --file="${HOME}/.setup/Brewfile"
+apm install file-icons go-plus language-vue
