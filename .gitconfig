@@ -16,5 +16,3 @@
 	insteadof = https://github.com/
 [include]
 	path = .gitconfig_custom
-[url "git@code.ac.st:"]
-	insteadof = https://code.ac.st/
