@@ -1,5 +1,9 @@
+tap "caskroom/cask"
+cask "atom"
 brew "git"
 brew "go"
+brew "gnupg2"
+cask "google-chrome"
 brew "pinentry-mac"
 brew "vim", args: ["override-system-vi"]
 brew "zsh"
