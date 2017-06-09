@@ -30,9 +30,7 @@ plugins=(git,golang)
 source $ZSH/oh-my-zsh.sh
 
 # Set Env Variables
-export JDK_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
-export GOPATH=$HOME/Go
-export PATH=$PATH:$GOPATH/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Applications/Couchbase\ Server.app/Contents/Resources/couchbase-core/bin
+export GOPATH=$HOME/go
 
 # Setup GNUPG 2
 if ! pgrep -x 0u "${USER}" gpg-agent>/dev/null 2>&1;then
@@ -46,3 +44,5 @@ export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
 alias config="$(which git) --git-dir=${HOME}/.cfg/ --work-tree=${HOME}"
+
+source $HOME/.customEnv
