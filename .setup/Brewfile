@@ -1,0 +1,5 @@
+brew "git"
+brew "go"
+brew "pinentry-mac"
+brew "vim", args: ["override-system-vi"]
+brew "zsh"
