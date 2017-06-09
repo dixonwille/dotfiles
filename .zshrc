@@ -44,6 +44,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Set Env Variables
 export GOPATH=$HOME/go
+export EDITOR='vim'
 
 alias config="$(which git) --git-dir=${HOME}/.cfg/ --work-tree=${HOME}"
 
