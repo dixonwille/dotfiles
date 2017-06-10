@@ -1,19 +1,5 @@
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
-# Setup GNUPG 2
-if ! pgrep -x -u "${USER}" gpg-agent>/dev/null 2>&1;then
-	gpg-connect-agent /bye>/dev/null 2>&1
-fi
-unset SSH_AGENT_PID
-if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-	if [[ "${OS}" == "Linux" ]]; then
-		export SSH_AUTH_SOCK="/run/user/${UID}/gnupg/S.gpg-agent.ssh"
-	elif [[ "${OS}" == "OSX" ]]; then
-		export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
-	fi
-fi
-export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # ZShell configuration
 export ZSH=${HOME}/.oh-my-zsh
@@ -40,6 +26,7 @@ POWERLEVEL9K_TIME_BACKGROUND="black"
 POWERLEVEL9K_TIME_FOREGROUND="249"
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S} \UE12E"
 plugins=(git,golang)
+DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
 
 # Set Env Variables
@@ -47,5 +34,22 @@ export GOPATH=$HOME/go
 export EDITOR='vim'
 
 alias config="$(which git) --git-dir=${HOME}/.cfg/ --work-tree=${HOME}"
+
+# Setup GNUPG 2
+if ! pgrep -x -u "${USER}" gpg-agent>/dev/null 2>&1;then
+	gpg-connect-agent /bye>/dev/null 2>&1
+fi
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+	if [[ "${OS}" == "Linux" ]]; then
+		export SSH_AUTH_SOCK="/run/user/${UID}/gnupg/S.gpg-agent.ssh"
+	elif [[ "${OS}" == "OSX" ]]; then
+		export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
+	fi
+fi
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+source $ZSH/tools/check_for_upgrade.sh 
 
 source $HOME/.customEnv
