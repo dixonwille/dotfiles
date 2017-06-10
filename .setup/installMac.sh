@@ -9,6 +9,6 @@ function wallpaper() {
 }
 wallpaper "${HOME}/Images/EinsteinWP.jpg"
 brew bundle --file="${HOME}/.setup/Brewfile"
-apm install file-icons go-plus language-vue
 sudo -v
 sudo ln -sf /usr/local/bin/pinentry-mac /usr/local/bin/pinentry
+source all.sh
