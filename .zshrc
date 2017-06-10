@@ -1,12 +1,12 @@
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Setup GNUPG 2
-if ! pgrep -x 0u "${USER}" gpg-agent>/dev/null 2>&1;then
+if ! pgrep -x -u "${USER}" gpg-agent>/dev/null 2>&1;then
 	gpg-connect-agent /bye>/dev/null 2>&1
 fi
 unset SSH_AGENT_PID
 if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-	export SSH_AUTH_SOCK="/Users/${USER}/.gnupg/S.gpg-agent.ssh"
+	export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
 fi
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
