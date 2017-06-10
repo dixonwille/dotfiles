@@ -1,0 +1,14 @@
+[global_config]
+  title_transmit_fg_color = "#c7c7c7"
+  title_transmit_bg_color = "#000000"
+  title_inactive_fg_color = "#c7c7c7"
+  title_inactive_bg_color = "#686868"
+
+[profiles]
+  [[default]]
+    palette = "#000000:#c91b00:#00c200:#c7c400:#0225c7:#ca30c7:#00c5c7:#c7c7c7:#686868:#ff6e67:#5ffa68:#fffc67:#6871ff:#ff77ff:#60fdff:#ffffff"
+    foreground_color = "#c7c7c7"
+    background_color = "#000000"
+    cursor_color = "#c7c7c7"
+    use_system_font = false
+    font = Droid Sans Mono Awesome 10
