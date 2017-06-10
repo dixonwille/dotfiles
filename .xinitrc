@@ -4,6 +4,7 @@ userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
+userxinitd=$HOME/.xinitrc.d
 
 # merge in defaults and keymaps
 
@@ -27,6 +28,12 @@ fi
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+if [ -d $userxinitd ] ; then
+ for f in $userxinitd/?*.sh ; do
   [ -x "$f" ] && . "$f"
  done
  unset f
