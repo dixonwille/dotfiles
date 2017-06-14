@@ -1,5 +1,7 @@
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
-
+# Set Env Variables
+export GOPATH=$HOME/go
+export EDITOR='vim'
+export PATH=$HOME/bin:$PATH:$GOPATH/bin
 
 # ZShell configuration
 export ZSH=${HOME}/.oh-my-zsh
@@ -28,10 +30,6 @@ POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S} \UE12E"
 plugins=(git,golang)
 DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
-
-# Set Env Variables
-export GOPATH=$HOME/go
-export EDITOR='vim'
 
 alias config="$(which git) --git-dir=${HOME}/.cfg/ --work-tree=${HOME}"
 
