@@ -2,6 +2,7 @@
 export GOPATH=$HOME/go
 export EDITOR='vim'
 export PATH=$HOME/bin:$PATH:$GOPATH/bin
+export ELECTRON_TRASH=trash-cli
 
 # ZShell configuration
 export ZSH=${HOME}/.oh-my-zsh
