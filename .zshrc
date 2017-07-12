@@ -28,7 +28,7 @@ POWERLEVEL9K_GO_ICON="\ue8ae"
 POWERLEVEL9K_TIME_BACKGROUND="black"
 POWERLEVEL9K_TIME_FOREGROUND="249"
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S} \UE12E"
-plugins=(git,golang)
+plugins=(git tmux)
 DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
 
