@@ -8,3 +8,4 @@ cask "iterm2"
 brew "pinentry-mac"
 brew "vim", args: ["override-system-vi"]
 brew "zsh"
+brew "diff-so-fancy"
